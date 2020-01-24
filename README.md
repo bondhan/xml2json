@@ -11,9 +11,9 @@
     - titles 
     - then insert each to json model
 3. For criteria:
-    - build repo for objects from <objects>
-    - build repo for states from <states>
-    - build repo for <tests> from previous objects and states
+    - build repo for objects from tag `<objects>`
+    - build repo for states from tag `<states>`
+    - build repo for tag`<tests>` from previous step objects and states
     - walk through criteria and criterion, when id match tests repo then replace with the tests value
     - insert to json model
 4. Got the final json model then marshall it we will get final json
