@@ -22,3 +22,12 @@
 ```json
 {"advisory":[{"title":"RHSA-2013:0696: firefox security update (Critical)","fixes_cve":["CVE-2013-0788","CVE-2013-0793","CVE-2013-0795","CVE-2013-0796","CVE-2013-0800"],"severity":"Critical","affected_cpe":["cpe:/o:redhat:enterprise_linux:5","cpe:/o:redhat:enterprise_linux:6","cpe:/o:redhat:enterprise_linux:5::client","cpe:/o:redhat:enterprise_linux:5::client_workstation","cpe:/o:redhat:enterprise_linux:5::server","cpe:/o:redhat:enterprise_linux:6::workstation","cpe:/o:redhat:enterprise_linux:6::computenode","cpe:/o:redhat:enterprise_linux:6::client","cpe:/o:redhat:enterprise_linux:6::server"],"criteria":[]},{"title":"..."}]}
 ```
+
+## usage
+go run main.go xml -url "https://www.redhat.com/security/data/oval/com.redhat.rhsa-20130696.xml"
+
+<pre>
+Usage of xml:
+  -url string
+        xml url (default "https://www.redhat.com/security/data/oval/com.redhat.rhsa-20130696.xml")
+</pre>

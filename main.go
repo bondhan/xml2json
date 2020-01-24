@@ -4,7 +4,10 @@ import (
 	// "io/ioutil"
 
 	"encoding/json"
+	"flag"
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 	"strings"
 
@@ -164,37 +167,37 @@ func main() {
 	logger := log.NewLogfmtLogger(os.Stdout)
 	logger = level.NewFilter(logger, level.AllowAll())
 
-	// fs := flag.NewFlagSet("xml", flag.ExitOnError)
-	// xmlInput := fs.String("url", "https://www.redhat.com/security/data/oval/com.redhat.rhsa-20130696.xml", "xml url")
+	fs := flag.NewFlagSet("xml", flag.ExitOnError)
+	xmlInput := fs.String("url", "https://www.redhat.com/security/data/oval/com.redhat.rhsa-20130696.xml", "xml url")
 
-	// if len(os.Args) >= 2 {
-	// 	fs.Parse(os.Args[2:])
-	// } else {
-	// 	logger.Log("Info", "No URL specified, downloading default https://www.redhat.com/security/data/oval/com.redhat.rhsa-20130696.xml")
-	// 	fs.Usage()
-	// }
+	if len(os.Args) >= 2 {
+		fs.Parse(os.Args[2:])
+	} else {
+		logger.Log("Info", "No URL specified, downloading default https://www.redhat.com/security/data/oval/com.redhat.rhsa-20130696.xml")
+		fs.Usage()
+	}
 
-	// resp, err := http.Get(*xmlInput)
-	// if err != nil {
-	// 	logger.Log("Error", err)
-	// 	os.Exit(-1)
-	// }
-	// defer resp.Body.Close()
+	resp, err := http.Get(*xmlInput)
+	if err != nil {
+		logger.Log("Error", err)
+		os.Exit(-1)
+	}
+	defer resp.Body.Close()
 
-	// // Create the file
-	// out, err := os.Create("file/input.xml")
-	// if err != nil {
-	// 	logger.Log("Error", err)
-	// 	os.Exit(-1)
-	// }
-	// defer out.Close()
+	// Create the file
+	out, err := os.Create("file/input.xml")
+	if err != nil {
+		logger.Log("Error", err)
+		os.Exit(-1)
+	}
+	defer out.Close()
 
-	// // Write the body to file
-	// _, err = io.Copy(out, resp.Body)
-	// if err != nil {
-	// 	logger.Log("Error", err)
-	// 	os.Exit(-1)
-	// }
+	// Write the body to file
+	_, err = io.Copy(out, resp.Body)
+	if err != nil {
+		logger.Log("Error", err)
+		os.Exit(-1)
+	}
 
 	doc := etree.NewDocument()
 	if err := doc.ReadFromFile("file/input.xml"); err != nil {
