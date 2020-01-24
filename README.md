@@ -4,12 +4,12 @@
 
 1. Create the the correct JSON model accordingly to the reference.json (see file/reference.json)
 2. Walk through the xmls file (file/input.xml) to get:
- - title
- - fixes_cve
- - severity
- - affected_cpe
- - titles
- then insert each to json model
+    - title
+    - fixes_cve
+    - severity
+    - affected_cpe
+    - titles 
+    - then insert each to json model
 3. For criteria:
     - build repo for objects from <objects>
     - build repo for states from <states>
