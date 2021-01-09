@@ -1,26 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:unix-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix" xmlns:red-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux linux-definitions-schema.xsd">
   <generator>
     <oval:product_name>Red Hat Errata System</oval:product_name>
     <oval:schema_version>5.10.1</oval:schema_version>
-    <oval:timestamp>2019-11-13T15:03:34</oval:timestamp>
+    <oval:timestamp>2020-12-12T10:37:32</oval:timestamp>
   </generator>
 
   <definitions>
-    <definition id="oval:com.redhat.rhsa:def:20130696" version="639" class="patch">
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20130696" version="640">
       <metadata>
         <title>RHSA-2013:0696: firefox security update (Critical)</title>
     <affected family="unix">
+        
           <platform>Red Hat Enterprise Linux 5</platform>
+        
           <platform>Red Hat Enterprise Linux 6</platform>
+        
     </affected>
-    <reference source="RHSA" ref_id="RHSA-2013:0696" ref_url="https://access.redhat.com/errata/RHSA-2013:0696"/>
-      <reference source="CVE" ref_id="CVE-2013-0788" ref_url="https://access.redhat.com/security/cve/CVE-2013-0788"/>
-      <reference source="CVE" ref_id="CVE-2013-0793" ref_url="https://access.redhat.com/security/cve/CVE-2013-0793"/>
-      <reference source="CVE" ref_id="CVE-2013-0795" ref_url="https://access.redhat.com/security/cve/CVE-2013-0795"/>
-      <reference source="CVE" ref_id="CVE-2013-0796" ref_url="https://access.redhat.com/security/cve/CVE-2013-0796"/>
-      <reference source="CVE" ref_id="CVE-2013-0800" ref_url="https://access.redhat.com/security/cve/CVE-2013-0800"/>
+    <reference ref_id="RHSA-2013:0696" ref_url="https://access.redhat.com/errata/RHSA-2013:0696" source="RHSA"/>
+    
+      <reference ref_id="CVE-2013-0788" ref_url="https://access.redhat.com/security/cve/CVE-2013-0788" source="CVE"/>
+    
+      <reference ref_id="CVE-2013-0793" ref_url="https://access.redhat.com/security/cve/CVE-2013-0793" source="CVE"/>
+    
+      <reference ref_id="CVE-2013-0795" ref_url="https://access.redhat.com/security/cve/CVE-2013-0795" source="CVE"/>
+    
+      <reference ref_id="CVE-2013-0796" ref_url="https://access.redhat.com/security/cve/CVE-2013-0796" source="CVE"/>
+    
+      <reference ref_id="CVE-2013-0800" ref_url="https://access.redhat.com/security/cve/CVE-2013-0800" source="CVE"/>
+    
     <description>Mozilla Firefox is an open source web browser. XULRunner provides the XUL
 Runtime environment for Mozilla Firefox.
 
@@ -67,153 +75,262 @@ the update, Firefox must be restarted for the changes to take effect.</descripti
         <severity>Critical</severity>
         <rights>Copyright 2013 Red Hat, Inc.</rights>
         <issued date="2013-04-02"/>
+        
         <updated date="2013-04-02"/>
-        <cve href="https://access.redhat.com/security/cve/CVE-2013-0788" cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" public="20130402">CVE-2013-0788</cve>
-<cve href="https://access.redhat.com/security/cve/CVE-2013-0793" cvss2="4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N" public="20130402" impact="moderate" cwe="CWE-79">CVE-2013-0793</cve>
-<cve href="https://access.redhat.com/security/cve/CVE-2013-0795" cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" public="20130402">CVE-2013-0795</cve>
-<cve href="https://access.redhat.com/security/cve/CVE-2013-0796" cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" public="20130402">CVE-2013-0796</cve>
-<cve href="https://access.redhat.com/security/cve/CVE-2013-0800" cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" public="20130402" impact="important" cwe="CWE-787">CVE-2013-0800</cve>
+        
+        
+        <cve cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" href="https://access.redhat.com/security/cve/CVE-2013-0788" public="20130402">CVE-2013-0788</cve>
 
+        
+        <cve cvss2="4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2013-0793" impact="moderate" public="20130402">CVE-2013-0793</cve>
+
+        
+        <cve cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" href="https://access.redhat.com/security/cve/CVE-2013-0795" public="20130402">CVE-2013-0795</cve>
+
+        
+        <cve cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" href="https://access.redhat.com/security/cve/CVE-2013-0796" public="20130402">CVE-2013-0796</cve>
+
+        
+        <cve cvss2="6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2013-0800" impact="important" public="20130402">CVE-2013-0800</cve>
+
+        
+    
+        
+    
+        
+    
+        
+    
+        
         <bugzilla href="https://bugzilla.redhat.com/946927" id="946927">CVE-2013-0788 Mozilla: Miscellaneous memory safety hazards (rv:17.0.5) (MFSA 2013-30)</bugzilla>
+        
+    
+        
         <bugzilla href="https://bugzilla.redhat.com/946929" id="946929">CVE-2013-0800 Mozilla: Out-of-bounds write in Cairo library (MFSA 2013-31)</bugzilla>
+        
+    
+        
         <bugzilla href="https://bugzilla.redhat.com/946931" id="946931">CVE-2013-0796 Mozilla: WebGL crash with Mesa graphics driver on Linux (MFSA 2013-35)</bugzilla>
+        
+    
+        
         <bugzilla href="https://bugzilla.redhat.com/946932" id="946932">CVE-2013-0795 Mozilla: Bypass of SOW protections allows cloning of protected nodes (MFSA 2013-36)</bugzilla>
+        
+    
+        
         <bugzilla href="https://bugzilla.redhat.com/946935" id="946935">CVE-2013-0793 Mozilla: Cross-site scripting (XSS) using timed history navigations (MFSA 2013-38)</bugzilla>
+        
+    
     <affected_cpe_list>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:5</cpe>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:6</cpe>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:5::client</cpe>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:5::client_workstation</cpe>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:5::server</cpe>
-        <cpe>cpe:/o:redhat:enterprise_linux:6::workstation</cpe>
-        <cpe>cpe:/o:redhat:enterprise_linux:6::computenode</cpe>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:6::client</cpe>
+    
+        <cpe>cpe:/o:redhat:enterprise_linux:6::computenode</cpe>
+    
         <cpe>cpe:/o:redhat:enterprise_linux:6::server</cpe>
+    
+        <cpe>cpe:/o:redhat:enterprise_linux:6::workstation</cpe>
+    
     </affected_cpe_list>
 </advisory>
       </metadata>
       <criteria operator="OR">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696015" comment="Red Hat Enterprise Linux must be installed" />
+ 
+ <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20130696015"/>
+
+ 
+ 
  <criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696007" comment="Red Hat Enterprise Linux 5 is installed" />
+ 
+ <criterion comment="Red Hat Enterprise Linux 5 is installed" test_ref="oval:com.redhat.rhsa:tst:20130696007"/>
+
+ 
+ 
  <criteria operator="OR">
  
+ 
  <criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696001" comment="xulrunner is earlier than 0:17.0.5-1.el5_9" /><criterion test_ref="oval:com.redhat.rhsa:tst:20130696002" comment="xulrunner is signed with Red Hat redhatrelease key" />
  
-</criteria>
-<criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696003" comment="xulrunner-devel is earlier than 0:17.0.5-1.el5_9" /><criterion test_ref="oval:com.redhat.rhsa:tst:20130696004" comment="xulrunner-devel is signed with Red Hat redhatrelease key" />
+ <criterion comment="xulrunner is earlier than 0:17.0.5-1.el5_9" test_ref="oval:com.redhat.rhsa:tst:20130696001"/>
+
  
-</criteria>
-<criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696005" comment="firefox is earlier than 0:17.0.5-1.el5_9" /><criterion test_ref="oval:com.redhat.rhsa:tst:20130696006" comment="firefox is signed with Red Hat redhatrelease key" />
+ <criterion comment="xulrunner is signed with Red Hat redhatrelease key" test_ref="oval:com.redhat.rhsa:tst:20130696002"/>
+
+ 
  
 </criteria>
 
+ 
+ <criteria operator="AND">
+ 
+ <criterion comment="xulrunner-devel is earlier than 0:17.0.5-1.el5_9" test_ref="oval:com.redhat.rhsa:tst:20130696003"/>
+
+ 
+ <criterion comment="xulrunner-devel is signed with Red Hat redhatrelease key" test_ref="oval:com.redhat.rhsa:tst:20130696004"/>
+
+ 
+ 
 </criteria>
 
+ 
+ <criteria operator="AND">
+ 
+ <criterion comment="firefox is earlier than 0:17.0.5-1.el5_9" test_ref="oval:com.redhat.rhsa:tst:20130696005"/>
+
+ 
+ <criterion comment="firefox is signed with Red Hat redhatrelease key" test_ref="oval:com.redhat.rhsa:tst:20130696006"/>
+
+ 
+ 
 </criteria>
-<criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696014" comment="Red Hat Enterprise Linux 6 is installed" />
+
+ 
+</criteria>
+
+ 
+</criteria>
+
+ 
+ <criteria operator="AND">
+ 
+ <criterion comment="Red Hat Enterprise Linux 6 is installed" test_ref="oval:com.redhat.rhsa:tst:20130696014"/>
+
+ 
+ 
  <criteria operator="OR">
  
+ 
  <criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696008" comment="xulrunner-devel is earlier than 0:17.0.5-1.el6_4" /><criterion test_ref="oval:com.redhat.rhsa:tst:20130696009" comment="xulrunner-devel is signed with Red Hat redhatrelease2 key" />
  
-</criteria>
-<criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696010" comment="xulrunner is earlier than 0:17.0.5-1.el6_4" /><criterion test_ref="oval:com.redhat.rhsa:tst:20130696011" comment="xulrunner is signed with Red Hat redhatrelease2 key" />
+ <criterion comment="xulrunner is earlier than 0:17.0.5-1.el6_4" test_ref="oval:com.redhat.rhsa:tst:20130696008"/>
+
  
-</criteria>
-<criteria operator="AND">
- <criterion test_ref="oval:com.redhat.rhsa:tst:20130696012" comment="firefox is earlier than 0:17.0.5-1.el6_4" /><criterion test_ref="oval:com.redhat.rhsa:tst:20130696013" comment="firefox is signed with Red Hat redhatrelease2 key" />
+ <criterion comment="xulrunner is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20130696009"/>
+
+ 
  
 </criteria>
 
+ 
+ <criteria operator="AND">
+ 
+ <criterion comment="xulrunner-devel is earlier than 0:17.0.5-1.el6_4" test_ref="oval:com.redhat.rhsa:tst:20130696010"/>
+
+ 
+ <criterion comment="xulrunner-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20130696011"/>
+
+ 
+ 
 </criteria>
 
+ 
+ <criteria operator="AND">
+ 
+ <criterion comment="firefox is earlier than 0:17.0.5-1.el6_4" test_ref="oval:com.redhat.rhsa:tst:20130696012"/>
+
+ 
+ <criterion comment="firefox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20130696013"/>
+
+ 
+ 
 </criteria>
 
+ 
+</criteria>
+
+ 
+</criteria>
+
+ 
 </criteria>
 
     </definition>
   </definitions>
   <tests>
-    <rpminfo_test id="oval:com.redhat.rhsa:tst:20130696001"  version="639" comment="xulrunner is earlier than 0:17.0.5-1.el5_9" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696001" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696001" />
+    <rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner is earlier than 0:17.0.5-1.el5_9" id="oval:com.redhat.rhsa:tst:20130696001" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696001"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696001"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696002"  version="639" comment="xulrunner is signed with Red Hat redhatrelease key" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696001" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696002" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner is signed with Red Hat redhatrelease key" id="oval:com.redhat.rhsa:tst:20130696002" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696001"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696002"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696003"  version="639" comment="xulrunner-devel is earlier than 0:17.0.5-1.el5_9" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696002" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696001" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner-devel is earlier than 0:17.0.5-1.el5_9" id="oval:com.redhat.rhsa:tst:20130696003" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696002"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696001"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696004"  version="639" comment="xulrunner-devel is signed with Red Hat redhatrelease key" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696002" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696002" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner-devel is signed with Red Hat redhatrelease key" id="oval:com.redhat.rhsa:tst:20130696004" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696002"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696002"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696005"  version="639" comment="firefox is earlier than 0:17.0.5-1.el5_9" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696003" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696003" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="firefox is earlier than 0:17.0.5-1.el5_9" id="oval:com.redhat.rhsa:tst:20130696005" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696003"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696003"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696006"  version="639" comment="firefox is signed with Red Hat redhatrelease key" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696003" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696002" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="firefox is signed with Red Hat redhatrelease key" id="oval:com.redhat.rhsa:tst:20130696006" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696003"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696002"/>
 </rpminfo_test>
-<rpmverifyfile_test id="oval:com.redhat.rhsa:tst:20130696007"  version="639" comment="Red Hat Enterprise Linux 5 is installed" check="at least one" xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696004" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696004" />
+<rpmverifyfile_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="Red Hat Enterprise Linux 5 is installed" id="oval:com.redhat.rhsa:tst:20130696007" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696004"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696004"/>
 </rpmverifyfile_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696008"  version="639" comment="xulrunner-devel is earlier than 0:17.0.5-1.el6_4" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696002" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696005" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner is earlier than 0:17.0.5-1.el6_4" id="oval:com.redhat.rhsa:tst:20130696008" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696001"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696005"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696009"  version="639" comment="xulrunner-devel is signed with Red Hat redhatrelease2 key" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696002" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696006" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20130696009" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696001"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696006"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696010"  version="639" comment="xulrunner is earlier than 0:17.0.5-1.el6_4" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696001" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696005" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner-devel is earlier than 0:17.0.5-1.el6_4" id="oval:com.redhat.rhsa:tst:20130696010" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696002"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696005"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696011"  version="639" comment="xulrunner is signed with Red Hat redhatrelease2 key" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696001" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696006" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="xulrunner-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20130696011" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696002"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696006"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696012"  version="639" comment="firefox is earlier than 0:17.0.5-1.el6_4" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696003" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696005" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="firefox is earlier than 0:17.0.5-1.el6_4" id="oval:com.redhat.rhsa:tst:20130696012" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696003"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696005"/>
 </rpminfo_test>
-<rpminfo_test id="oval:com.redhat.rhsa:tst:20130696013"  version="639" comment="firefox is signed with Red Hat redhatrelease2 key" check='at least one' xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696003" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696006" />
+<rpminfo_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="firefox is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20130696013" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696003"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696006"/>
 </rpminfo_test>
-<rpmverifyfile_test id="oval:com.redhat.rhsa:tst:20130696014"  version="639" comment="Red Hat Enterprise Linux 6 is installed" check="at least one" xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696004" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696007" />
+<rpmverifyfile_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="at least one" comment="Red Hat Enterprise Linux 6 is installed" id="oval:com.redhat.rhsa:tst:20130696014" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696004"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696007"/>
 </rpmverifyfile_test>
-<rpmverifyfile_test id="oval:com.redhat.rhsa:tst:20130696015"  version="639" comment="Red Hat Enterprise Linux must be installed" check="none satisfy" xmlns='http://oval.mitre.org/XMLSchema/oval-definitions-5#linux'>
-  <object object_ref="oval:com.redhat.rhsa:obj:20130696004" />
-    <state state_ref="oval:com.redhat.rhsa:ste:20130696008" />
+<rpmverifyfile_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" check="none satisfy" comment="Red Hat Enterprise Linux must be installed" id="oval:com.redhat.rhsa:tst:20130696015" version="640">
+  <object object_ref="oval:com.redhat.rhsa:obj:20130696004"/>
+  <state state_ref="oval:com.redhat.rhsa:ste:20130696008"/>
 </rpmverifyfile_test>
 
   </tests>
   <objects>
-    <rpminfo_object id="oval:com.redhat.rhsa:obj:20130696001"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
+    <rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:obj:20130696001" version="640">
   <name>xulrunner</name>
 </rpminfo_object>
-<rpminfo_object id="oval:com.redhat.rhsa:obj:20130696002"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
+<rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:obj:20130696002" version="640">
   <name>xulrunner-devel</name>
 </rpminfo_object>
-<rpminfo_object id="oval:com.redhat.rhsa:obj:20130696003"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
+<rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:obj:20130696003" version="640">
   <name>firefox</name>
 </rpminfo_object>
-<rpmverifyfile_object id="oval:com.redhat.rhsa:obj:20130696004" version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
-  <behaviors nolinkto='true' nomd5='true' nosize='true' nouser='true' nogroup='true' nomtime='true' nomode='true' nordev='true' noconfigfiles='true' noghostfiles='true' />
+<rpmverifyfile_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:obj:20130696004" version="640">
+  <behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true"/>
   <name operation="pattern match"/>
   <epoch operation="pattern match"/>
   <version operation="pattern match"/>
@@ -224,35 +341,39 @@ the update, Firefox must be restarted for the changes to take effect.</descripti
 
   </objects>
   <states>
-    <rpminfo_state id="oval:com.redhat.rhsa:ste:20130696001"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
+    <rpminfo_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696001" version="640">
   <arch datatype="string" operation="pattern match">i386|ia64|ppc|ppc64|s390|s390x|x86_64</arch>
   <evr datatype="evr_string" operation="less than">0:17.0.5-1.el5_9</evr>
 </rpminfo_state>
-<rpminfo_state id="oval:com.redhat.rhsa:ste:20130696002"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
-  <signature_keyid  operation="equals">5326810137017186</signature_keyid>
+<rpminfo_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696002" version="640">
+  
+  <signature_keyid operation="equals">5326810137017186</signature_keyid>
 </rpminfo_state>
-<rpminfo_state id="oval:com.redhat.rhsa:ste:20130696003"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
+<rpminfo_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696003" version="640">
   <arch datatype="string" operation="pattern match">i386|ia64|ppc|s390|s390x|x86_64</arch>
   <evr datatype="evr_string" operation="less than">0:17.0.5-1.el5_9</evr>
 </rpminfo_state>
-<rpmverifyfile_state id="oval:com.redhat.rhsa:ste:20130696004"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
-    <name operation="pattern match">^redhat-release</name>
-    <version operation="pattern match">^5[^\d]</version>
+<rpmverifyfile_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696004" version="640">
+  <name operation="pattern match">^redhat-release</name>
+  <version operation="pattern match">^5[^\d]</version>
 </rpmverifyfile_state>
-<rpminfo_state id="oval:com.redhat.rhsa:ste:20130696005"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
+<rpminfo_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696005" version="640">
   <arch datatype="string" operation="pattern match">i686|ppc|ppc64|s390|s390x|x86_64</arch>
   <evr datatype="evr_string" operation="less than">0:17.0.5-1.el6_4</evr>
 </rpminfo_state>
-<rpminfo_state id="oval:com.redhat.rhsa:ste:20130696006"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
-  <signature_keyid  operation="equals">199e2f91fd431d51</signature_keyid>
+<rpminfo_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696006" version="640">
+  
+  <signature_keyid operation="equals">199e2f91fd431d51</signature_keyid>
 </rpminfo_state>
-<rpmverifyfile_state id="oval:com.redhat.rhsa:ste:20130696007"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
-    <name operation="pattern match">^redhat-release</name>
-    <version operation="pattern match">^6[^\d]</version>
+<rpmverifyfile_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696007" version="640">
+  <name operation="pattern match">^redhat-release</name>
+  <version operation="pattern match">^6[^\d]</version>
 </rpmverifyfile_state>
-<rpmverifyfile_state id="oval:com.redhat.rhsa:ste:20130696008"  version="639" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux">
-    <name operation="pattern match">^redhat-release</name>
+<rpmverifyfile_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" id="oval:com.redhat.rhsa:ste:20130696008" version="640">
+  <name operation="pattern match">^redhat-release</name>
+  
 </rpmverifyfile_state>
 
   </states>
+  
 </oval_definitions>
