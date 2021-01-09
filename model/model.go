@@ -1,7 +1,5 @@
 package model
 
-import "encoding/xml"
-
 //Oval ...
 type Oval struct {
 	// XMLName           xml.Name    `xml:"oval_definitions" json:"ovalDefinitions"`
@@ -55,10 +53,10 @@ type affected struct {
 }
 
 type reference struct {
-	XMLName xml.Name `xml:"reference" json:"reference"`
-	RefID   string   `xml:"ref_id,attr" json:"refId"`
-	RefURL  string   `xml:"ref_url,attr" json:"refUrl"`
-	Source  string   `xml:"source,attr" json:"source"`
+	// XMLName xml.Name `xml:"reference" json:"reference"`
+	RefID  string `xml:"ref_id,attr" json:"refId"`
+	RefURL string `xml:"ref_url,attr" json:"refUrl"`
+	Source string `xml:"source,attr" json:"source"`
 }
 type advisory struct {
 	// XMLName     xml.Name `xml:"advisory" json:"advisory"`
