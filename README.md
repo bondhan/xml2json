@@ -2,21 +2,10 @@
 
 ## Explanation of general algorithm
 
-1. Create the the correct JSON model accordingly to the reference.json (see file/reference.json)
-2. Walk through the xmls file (file/input.xml) to get:
-    - title
-    - fixes_cve
-    - severity
-    - affected_cpe
-    - titles 
-    - then insert each to json model
-3. For criteria:
-    - build repo for objects from tag `<objects>`
-    - build repo for states from tag `<states>`
-    - build repo for tag`<tests>` from previous step objects and states
-    - walk through criteria and criterion, when id match tests repo then replace with the tests value
-    - insert to json model
-4. Got the final json model then marshall it we will get final json
+1. Create the first model based on oval http://oval.mitre.org/XMLSchema
+2. Read the xml file and unmarshal to object
+3. Create second model based on "file/reference.json"
+4. Manipulate and parse the result from first model to second model
 
 ## output (unfinished)
 ```json
