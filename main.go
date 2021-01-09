@@ -21,6 +21,13 @@ var (
 	states map[string][]string
 )
 
+func check(logger log.Logger, err error) {
+	if err != nil {
+		logger.Log("Error", err)
+		os.Exit(-1)
+	}
+}
+
 func main() {
 
 	logger := log.NewLogfmtLogger(os.Stdout)
@@ -68,15 +75,53 @@ func main() {
 	byteValue, _ := ioutil.ReadAll(xmlFile)
 
 	// we initialize our Users array
-	var root model.Oval
-	err = xml.Unmarshal(byteValue, &root)
+	var oval model.Oval
+	err = xml.Unmarshal(byteValue, &oval)
 	if err != nil {
 		logger.Log("Error", err)
 	}
 
-	m, err := json.Marshal(root)
+	// m, err := json.Marshal(oval)
+	// if err != nil {
+	// 	logger.Log("Error", err)
+	// }
+	// fmt.Printf("\n\nResult: \n%s\n", m)
+
+	var cves []string
+	for _, ref := range oval.Definitions.Definition.Metadata.Reference {
+		cves = append(cves, ref.RefID)
+	}
+
+	var affected []string
+	for _, aff := range oval.Definitions.Definition.Metadata.Affected.Platform {
+		affected = append(affected, aff)
+	}
+
+	// var advisory model.Advisory
+	advisoryDetails := model.AdvisoryDetails{
+		Title:       oval.Definitions.Definition.Metadata.Title,
+		FixesCVE:    cves,
+		Severity:    oval.Definitions.Definition.Metadata.Advisory.Severity,
+		AffectedCpe: affected,
+	}
+
+	adT := model.AdTitle{
+		Title: "...",
+	}
+
+	da := model.DataAdvisory{
+		AdvisoryDetails: advisoryDetails,
+		AdTitle:         adT,
+	}
+
+	root := model.Advisory{
+		Dataadvisory: []model.DataAdvisory{da},
+	}
+
+	res, err := json.Marshal(&root)
 	if err != nil {
 		logger.Log("Error", err)
 	}
-	fmt.Printf("\n\nResult: \n%s\n", m)
+	fmt.Printf("\n\nResult: \n%s\n", res)
+
 }

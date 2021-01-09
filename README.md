@@ -3,20 +3,7 @@
 ## Explanation of general algorithm
 
 1. Create the the correct JSON model accordingly to the reference.json (see file/reference.json)
-2. Walk through the xmls file (file/input.xml) to get:
-    - title
-    - fixes_cve
-    - severity
-    - affected_cpe
-    - titles 
-    - then insert each to json model
-3. For criteria:
-    - build repo for objects from tag `<objects>`
-    - build repo for states from tag `<states>`
-    - build repo for tag`<tests>` from previous step objects and states
-    - walk through criteria and criterion, when id match tests repo then replace with the tests value
-    - insert to json model
-4. Got the final json model then marshall it we will get final json
+2. 
 
 ## output 
 ```json

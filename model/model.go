@@ -144,3 +144,26 @@ type rpmverifyobject struct {
 type states struct {
 	// XMLName xml.Name `xml:"states"`
 }
+
+//mapping to
+
+type Advisory struct {
+	Dataadvisory []DataAdvisory `json:"advisory"`
+}
+
+type DataAdvisory struct {
+	AdvisoryDetails AdvisoryDetails `json:"advisory"`
+	AdTitle
+}
+
+type AdvisoryDetails struct {
+	Title       string              `json:"title"`
+	FixesCVE    []string            `json:"fixes_cve"`
+	Severity    string              `json:"severity"`
+	AffectedCpe []string            `json:"affected_cpe"`
+	Criteria    map[string][]string `json:"criteria"`
+}
+
+type AdTitle struct {
+	Title string `json:"title"`
+}
